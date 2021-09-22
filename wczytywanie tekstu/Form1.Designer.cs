@@ -33,7 +33,8 @@ namespace wczytywanie_tekstu
             this.buttonWczytywanie = new System.Windows.Forms.Button();
             this.buttonzapis = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.buttonZapisDialog = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -56,11 +57,12 @@ namespace wczytywanie_tekstu
             // 
             // buttonzapis
             // 
-            this.buttonzapis.Location = new System.Drawing.Point(644, 399);
+            this.buttonzapis.Location = new System.Drawing.Point(552, 399);
             this.buttonzapis.Name = "buttonzapis";
-            this.buttonzapis.Size = new System.Drawing.Size(75, 23);
+            this.buttonzapis.Size = new System.Drawing.Size(90, 23);
             this.buttonzapis.TabIndex = 2;
-            this.buttonzapis.Text = "zapisz";
+            this.buttonzapis.Text = "zapisz zmiany";
+            this.buttonzapis.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonzapis.UseVisualStyleBackColor = true;
             this.buttonzapis.Click += new System.EventHandler(this.buttonzapis_Click);
             // 
@@ -71,21 +73,27 @@ namespace wczytywanie_tekstu
             this.openFileDialog1.InitialDirectory = "C:\\";
             this.openFileDialog1.RestoreDirectory = true;
             // 
-            // label1
+            // saveFileDialog1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(644, 163);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.saveFileDialog1.InitialDirectory = "C:\\";
+            this.saveFileDialog1.RestoreDirectory = true;
+            // 
+            // buttonZapisDialog
+            // 
+            this.buttonZapisDialog.Location = new System.Drawing.Point(698, 399);
+            this.buttonZapisDialog.Name = "buttonZapisDialog";
+            this.buttonZapisDialog.Size = new System.Drawing.Size(90, 23);
+            this.buttonZapisDialog.TabIndex = 3;
+            this.buttonZapisDialog.Text = "nowy plik";
+            this.buttonZapisDialog.UseVisualStyleBackColor = true;
+            this.buttonZapisDialog.Click += new System.EventHandler(this.buttonZapisDialog_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonZapisDialog);
             this.Controls.Add(this.buttonzapis);
             this.Controls.Add(this.buttonWczytywanie);
             this.Controls.Add(this.textBox1);
@@ -102,7 +110,8 @@ namespace wczytywanie_tekstu
         private System.Windows.Forms.Button buttonWczytywanie;
         private System.Windows.Forms.Button buttonzapis;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button buttonZapisDialog;
     }
 }
 
